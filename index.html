@@ -19,14 +19,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body><button onclick="closePWA()">Close PWA</button>
+<button onclick="closePWA()">Close PWAaa</button>
 
 <script>
     function closePWA() {
-        window.location.href = "about:blank"; // Redirects to blank page
-        setTimeout(() => {
-            window.close(); // Closes the PWA window
-        }, 500); // Small delay for stability
+        if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
+            // 🔹 Android: Directly close the PWA
+            window.close();
+
+            // 🔹 iOS Workaround: Redirect to blank and clear screen
+            setTimeout(() => {
+                document.body.innerHTML = ""; // Clear PWA content
+                location.reload(); // Force reload to Home Screen
+            }, 500);
+        }
     }
 </script>
   <a href="https://download01movies.blogspot.com/2024/12/referrer-detector-referrer-detector-get.html">nnlnn</a>
