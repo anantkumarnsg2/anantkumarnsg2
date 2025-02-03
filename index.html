@@ -17,37 +17,7 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
-<button onclick="closePWA()">Close & Open nnn.com</button>
-
-<script>
-    function closePWA() {
-        const url = "https://nnn.com"; // Default browser me open hone wala URL
-
-        if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
-            // 🔹 Pehle PWA close kare
-            window.close();
-
-            // 🔹 iOS Workaround: PWA blank kare aur reload kare
-            document.body.innerHTML = ""; // PWA blank ho jayega
-            location.reload(); // Home screen pe bhejne ke liye
-
-            // 🔹 Default browser me URL open karne ke liye target="_blank" use karega
-            setTimeout(() => {
-                const a = document.createElement("a");
-                a.href = url;
-                a.target = "_blank";
-                a.rel = "noopener noreferrer";
-                document.body.appendChild(a);
-                a.click();
-            }, 10);
-        }
-    }
-</script>
-
-
-
-  <a href="https://download01movies.blogspot.com/2024/12/referrer-detector-referrer-detector-get.html">nnlnn</a>
+ <a href="https://download01movies.blogspot.com/2024/12/referrer-detector-referrer-detector-get.html">nnlnn</a>
 </body>
 </html>
