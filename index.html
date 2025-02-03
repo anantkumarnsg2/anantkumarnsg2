@@ -19,13 +19,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body>
-  <button onclick="openInBrowser()">Open in Browser</button>
+<body><button onclick="closePWA()">Close PWA</button>
 
 <script>
-    function openInBrowser() {
-        const url = window.location.href; // Current PWA URL
-        window.open(url, "_blank"); // Opens in the default browser
+    function closePWA() {
+        window.location.href = "about:blank"; // Redirects to blank page
+        setTimeout(() => {
+            window.close(); // Closes the PWA window
+        }, 500); // Small delay for stability
     }
 </script>
   <a href="https://download01movies.blogspot.com/2024/12/referrer-detector-referrer-detector-get.html">nnlnn</a>
