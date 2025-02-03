@@ -1,3 +1,4 @@
+// Service Worker Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open('my-cache').then((cache) => {
@@ -12,10 +13,18 @@ self.addEventListener('install', (event) => {
   );
 });
 
+// Service Worker Fetch event
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request);
     })
   );
+});
+
+// Handle 'beforeinstallprompt' event for custom install prompt
+self.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    // Store the event for later use when user interacts
+    self.deferredPrompt = event;
 });
