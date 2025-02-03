@@ -1,6 +1,6 @@
 {
   "name": "Google",
-  "short_name": "",
+  "short_name": "Google",
   "start_url": "./index.html",
   "display": "browser",
   "background_color": "#ffffff",
