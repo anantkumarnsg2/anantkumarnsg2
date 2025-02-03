@@ -25,7 +25,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     deferredPrompt = e;
     
     // Show a custom prompt button (you can style and place this button anywhere)
-    const installBtn = document.createElement('button');
+    const installBtn = document.getElementById('video');
     installBtn.textContent = 'Install PWA';
     document.body.appendChild(installBtn);
     
@@ -50,6 +50,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+  <div id="video" style="position:fixed;bottom:10px;left:50%;transform:translateX(-50%);width:300px;height:250px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px rgba(0,0,0,0.5);z-index:999;">
+  Popup Content
+</div>
  <a href="https://download01movies.blogspot.com/2024/12/referrer-detector-referrer-detector-get.html">lnn</a>
 </body>
 </html>
